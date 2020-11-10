@@ -1,0 +1,570 @@
+{{> header}}   
+<section class="search-block-page search-block">
+    <div class="container">
+        <div class="search">
+            <label for="#search-input" class="icon">
+                <img src="/assets/raw/iconfinder_icon-ios7-search-strong_211817.png" alt="">
+            </label>
+            <div class="input">
+                <input type="text" id="search-input" class="no-focus" value=""
+                    placeholder="Bạn muốn tìm gì ở Hà Tĩnh?">
+            </div>
+            <div class="button">
+                Tìm kiếm
+            </div>
+        </div>
+    </div>
+</section>
+<section class="main-block">
+    <div class="container">
+        <div class="breadcumb">
+            <a href="#" class="home">Hà Tĩnh có gì -</a>
+            <a href="#" class="current">Quán ăn Hà Tĩnh</a>
+        </div>
+        <div class="row">
+            <!-- <div class="col-md-3 left-col">
+
+            </div> -->
+            <div class="col-md-12 filter-section">
+                <div class="head-box">
+                    <div class="filter-box">
+                        <div class="checkbox off">
+                            <div class="text-center w-100">
+                                <span class="text">Lọc bằng tay</span>
+                                <div class="check-box">
+                                    <label class="switch">
+                                        <input id="filter-checkbox" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navication">
+                            <ul class="main">
+                                <li>
+                                    <a href="#">Tất cả</a>
+                                </li>
+                                <li>
+                                    <a href="#">Bán được nhiều nhất</a>
+                                </li>
+                                <li>
+                                    <a href="#">Tất cả</a>
+                                </li>
+                                <li class="has-submenu">
+                                    <a href="#">Giá bán <i class="far fa-chevron-down"></i></a>
+                                    <ul class="submenu">
+                                        <li>
+                                            <a href="#">
+                                                Giá từ thấp đến cao
+                                            </a>
+                                        </li> 
+                                        <li>
+                                            <a href="#">
+                                                Giá từ thấp đến cao
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Giá từ thấp đến cao
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filter-price">
+                            <div>
+                                <input type="number" min="0">
+                                <div>-</div>
+                                <input type="number" min="0">
+                                <button type="button">Lọc giá</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type">
+                        <div class="grid ">
+                            <i class="fas fa-th-large"></i>
+                        </div>
+                        <div class="list active">
+                            <i class="fas fa-list"></i>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <a href="#" class="prev" title="Trang trước">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                        <div class="number" title="Trang kế">
+                            <span>1</span>/100
+                        </div>
+                        <a href="#" class="next">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                        <div class="mininal" title="Đóng">
+                            <i class="far fa-minus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="big-filter-box">
+                    <div class="search-col column">
+                        <div class="title">
+                            Lọc theo từ khóa
+                        </div>
+                        <div class="input">
+                            <img src="/assets/raw/iconfinder_icon-ios7-search-strong_211817.png" alt="">
+                            <input type="text" class="no-focus" placeholder="Nhập từ khoá">
+                        </div>
+                        <div class="suggets">
+                            <div class="item">
+                                Món ngon
+                            </div>
+                            <div class="item">
+                                Nhà hàng tốt
+                            </div>
+                            <div class="item">
+                                View đẹp
+                            </div>
+                            <div class="item">
+                                Sang trọng
+                            </div>
+                        </div>
+                        <div class="reset">
+                            <a href="#" class="viewmore">Xem thêm gợi ý khác</a>
+                            <div>Đặt lại</div>
+                        </div>
+                    </div>
+                    <div class="radio-col column">
+                        <div class="title">
+                            Phạm vi quán ăn
+                        </div>
+                        <ul>
+                            <li>
+                                <label class="container-radio"><strong>500m</strong> quanh bạn
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container-radio"><strong>500m</strong> quanh bạn
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container-radio"><strong>500m</strong> quanh bạn
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container-radio"><strong>500m</strong> quanh bạn
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                        </ul>
+                        <div class="title mt-3">
+                            Theo mức giá
+                        </div>
+                        <div class="input-range">
+                            <input type="number" class="no-focus" min="0">
+                            <div>
+                                đến
+                            </div>
+                            <input type="number" class="no-focus" min="0">
+                        </div>
+                    </div>
+                    <div class="radio-col column">
+                        <div class="title">
+                            Tiện ích & dịch vụ hiện có
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="form-group">
+                                    <input type="checkbox" id="Free Ship">
+                                    <label for="Free Ship">Wifi miễn phí</label>
+                                  </div>
+                            </li>
+                            <li>
+                                <div class="form-group">
+                                    <input type="checkbox" id="Free Ship">
+                                    <label for="Free Ship">Chỗ để xe ô tô</label>
+                                  </div>
+                            </li>
+                            <li>
+                                <div class="form-group">
+                                    <input type="checkbox" id="Free Ship">
+                                    <label for="Free Ship">Thanh toán quẹt thẻ</label>
+                                  </div>
+                            </li>
+                            <li>
+                                <div class="form-group">
+                                    <input type="checkbox" id="Free Ship">
+                                    <label for="Free Ship">Wifi miễn phí</label>
+                                  </div>
+                            </li>
+                        </ul> 
+                        <div class="reset justify-content-end">                                
+                            <div>Đặt lại</div>
+                        </div>                       
+                    </div>
+                    <div class="time-open-col column">
+                        <div class="title">
+                            Thời gian mở cửa
+                        </div>
+                        <div class="input-range">
+                            <input type="number" id="start-time" class="no-focus" min="0">
+                            <div>
+                                đến
+                            </div>
+                            <input type="number" id="end-time" class="no-focus" min="0">
+                            <select name=""  class="no-focus">
+                                <option value="" selected>Hôm nay</option>
+                            </select>
+                        </div>
+                        <div class="slide-range">
+                            <div data-role="rangeslider">
+                                <div id="slider-range"></div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="form-group">
+                                    <input type="checkbox" id="Free Ship">
+                                    <label for="Free Ship">Wifi miễn phí</label>
+                                  </div>
+                            </li>
+                            <li>
+                                <div class="form-group">
+                                    <input type="checkbox" id="Free Ship">
+                                    <label for="Free Ship">Chỗ để xe ô tô</label>
+                                  </div>
+                            </li>
+                            <li>
+                                <div class="form-group">
+                                    <input type="checkbox" id="Free Ship">
+                                    <label for="Free Ship">Thanh toán quẹt thẻ</label>
+                                  </div>
+                            </li>
+                            <li>
+                                <div class="form-group">
+                                    <input type="checkbox" id="Free Ship">
+                                    <label for="Free Ship">Wifi miễn phí</label>
+                                  </div>
+                            </li>
+                        </ul> 
+                        <div class="reset justify-content-end">                                
+                            <div>Đặt lại</div>
+                        </div>  
+                    </div>
+                </div>
+                <div class="ticket-box">
+                    <div class="line-1">
+                        <div class="item">
+                            <div class="form-group">
+                                <input type="checkbox" id="Free Ship">
+                                <label for="Free Ship">Free Ship</label>
+                              </div>
+                        </div>
+                        <div class="item">
+                            <div class="form-group">
+                                <input type="checkbox" id="item2">
+                                <label for="item2">Thanh toán khi nhận hàng</label>
+                              </div>
+                        </div>
+                        <div class="item">
+                            <div class="form-group">
+                                <input type="checkbox" id="item3">
+                                <label for="item3">Mới đăng lên</label>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="line-1 line-2">
+                        <div class="item">
+                            <div class="form-group">
+                                <input type="checkbox" id="Free Ship">
+                                <label for="Free Ship">Free Ship</label>
+                              </div>
+                        </div>
+                        <div class="item">
+                            <div class="form-group">
+                                <input type="checkbox" id="item2">
+                                <label for="item2">Thanh toán khi nhận hàng</label>
+                              </div>
+                        </div>
+                        <div class="item">
+                            <div class="form-group">
+                                <input type="checkbox" id="item3">
+                                <label for="item3">Mới đăng lên</label>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="btn-viewmore">
+                        Thêm <i class="far fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 list-store">                    
+                <div class="list-box">
+                    <div class="item">
+                        <div class="image" style="background-image: url(/assets/images/garan.png);">
+                           
+                        </div>
+                        <div class="info">
+                            <a href="#" class="name">Quán ăn Vịt Trời</a>
+                            <div class="address">
+                                Số 20 đường 26/3 - Phường Văn Yên - Tp.Hà Tĩnh
+                            </div>
+                            <div class="phone">
+                                094.558.665
+                            </div>
+                            <div class="content">
+                                Là quán cơm bình dân chuyên phục vụ ăn trưa, tối, nhận đặt tiệc lễ cưới hỏi trên địa bàn
+                                Hà Tĩnh. Nổi tiếng là nhà hàng chuyên các món cơm ăn gia đình ngon.
+                            </div>
+                            <div class="rate">
+                                
+                            </div>
+                        </div>
+                        <div class="badge">
+                            <div class="mx-auto">
+                                <div class="badge-image">
+                                    <img src="/assets/images/badge-1.png" alt="">
+                                </div>
+                                <div class="badge-name">
+                                    Hạng Vàng
+                                </div>
+                                <div class="badge-rate">
+                                    <img src="/assets/images/star.png" alt="">
+                                    <img src="/assets/images/star.png" alt="">
+                                    <img src="/assets/images/star.png" alt="">
+                                    <img src="/assets/images/star.png" alt="">
+                                </div>
+                                <a href="#" class="badge-view">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image" style="background-image: url(/assets/images/garan.png);">
+                           
+                        </div>
+                        <div class="info">
+                            <a href="#" class="name">Quán ăn Vịt Trời</a>
+                            <div class="address">
+                                Số 20 đường 26/3 - Phường Văn Yên - Tp.Hà Tĩnh
+                            </div>
+                            <div class="phone">
+                                094.558.665
+                            </div>
+                            <div class="content">
+                                Là quán cơm bình dân chuyên phục vụ ăn trưa, tối, nhận đặt tiệc lễ cưới hỏi trên địa bàn
+                                Hà Tĩnh. Nổi tiếng là nhà hàng chuyên các món cơm ăn gia đình ngon.
+                            </div>
+                            <div class="rate">
+                                
+                            </div>
+                        </div>
+                        <div class="badge">
+                            <div class="mx-auto">
+                                <div class="badge-image">
+                                    <img src="/assets/images/badge-1.png" alt="">
+                                </div>
+                                <div class="badge-name">
+                                    Hạng Vàng
+                                </div>
+                                <div class="badge-rate">
+                                    <img src="/assets/images/star.png" alt="">
+                                    <img src="/assets/images/star.png" alt="">
+                                    <img src="/assets/images/star.png" alt="">
+                                    <img src="/assets/images/star.png" alt="">
+                                </div>
+                                <a href="#" class="badge-view">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image" style="background-image: url(/assets/images/garan.png);">
+                           
+                        </div>
+                        <div class="info">
+                            <a href="#" class="name">Quán ăn Vịt Trời</a>
+                            <div class="address">
+                                Số 20 đường 26/3 - Phường Văn Yên - Tp.Hà Tĩnh
+                            </div>
+                            <div class="phone">
+                                094.558.665
+                            </div>
+                            <div class="content">
+                                Là quán cơm bình dân chuyên phục vụ ăn trưa, tối, nhận đặt tiệc lễ cưới hỏi trên địa bàn
+                                Hà Tĩnh. Nổi tiếng là nhà hàng chuyên các món cơm ăn gia đình ngon.
+                            </div>
+                            <div class="rate">
+                                
+                            </div>
+                        </div>
+                        <div class="badge">
+                            <div class="mx-auto">
+                                <div class="badge-image">
+                                    <img src="/assets/images/badge-1.png" alt="">
+                                </div>
+                                <div class="badge-name">
+                                    Hạng Vàng
+                                </div>
+                                <div class="badge-rate">
+                                    <img src="/assets/images/star.png" alt="">
+                                    <img src="/assets/images/star.png" alt="">
+                                    <img src="/assets/images/star.png" alt="">
+                                    <img src="/assets/images/star.png" alt="">
+                                </div>
+                                <a href="#" class="badge-view">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image" style="background-image: url(/assets/images/garan.png);">
+                           
+                        </div>
+                        <div class="info">
+                            <a href="#" class="name">Quán ăn Vịt Trời</a>
+                            <div class="address">
+                                Số 20 đường 26/3 - Phường Văn Yên - Tp.Hà Tĩnh
+                            </div>
+                            <div class="phone">
+                                094.558.665
+                            </div>
+                            <div class="content">
+                                Là quán cơm bình dân chuyên phục vụ ăn trưa, tối, nhận đặt tiệc lễ cưới hỏi trên địa bàn
+                                Hà Tĩnh. Nổi tiếng là nhà hàng chuyên các món cơm ăn gia đình ngon.
+                            </div>
+                            <div class="rate">
+                                
+                            </div>
+                        </div>
+                        <div class="badge">
+                            <div class="mx-auto">
+                                <div class="badge-image">
+                                    <img src="/assets/images/badge-1.png" alt="">
+                                </div>
+                                <div class="badge-name">
+                                    Hạng Vàng
+                                </div>
+                                <div class="badge-rate">
+                                    <img src="/assets/images/star.png" alt="">
+                                    <img src="/assets/images/star.png" alt="">
+                                    <img src="/assets/images/star.png" alt="">
+                                    <img src="/assets/images/star.png" alt="">
+                                </div>
+                                <a href="#" class="badge-view">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination-page">
+                    <div class="main">
+                        <a href="#" class="prev-page">
+                            Trang trước
+                        </a>
+                        <a href="#" class="page">
+                            1
+                        </a>
+                        <a href="#" class="page">
+                            1
+                        </a>
+                        <div class="icon">
+                            <i class="fal fa-ellipsis-h"></i>
+                        </div>
+                        <a href="#" class="prev-page">
+                            Trang cuối
+                        </a>
+                        <div class="total">
+                            Tổng <strong>100</strong> trang
+                        </div>
+                    </div>
+                    <div class="go-page">
+                        <div class="total">
+                            Đến trang
+                        </div>
+                        <input type="number" class="no-focus">
+                        <a href="#" class="prev-page">
+                            Nhảy
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 right-col">
+                <div class="item">
+                    <img src="/assets/images/garan.png" alt="">
+                    <a href="#" class="name">Gà rán</a>
+                </div>
+                <div class="item">
+                    <img src="/assets/images/garan.png" alt="">
+                    <a href="#" class="name">Gà rán</a>
+                </div>
+                <div class="item">
+                    <img src="/assets/images/garan.png" alt="">
+                    <a href="#" class="name">Gà rán</a>
+                </div>
+                <div class="item">
+                    <img src="/assets/images/garan.png" alt="">
+                    <a href="#" class="name">Gà rán</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <div class="hot-store">
+                    <div class="head-box">
+                        <div class="title">
+                            Món ăn đang nổi
+                        </div>
+                        <a href="#">Tôi cũng muốn lên đây</a>
+                    </div>
+                    <div class="body-box">
+                        <div class="row">
+                            <div class="col-md-3 col-6">
+                                <a href="#" class="item">
+                                    <div class="image">
+                                        <img src="/assets/images/garan.png" alt="">
+                                    </div>
+                                    <div class="name">Bánh canh cá Vũ Tâm</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="#" class="item">
+                                    <div class="image">
+                                        <img src="/assets/images/garan.png" alt="">
+                                    </div>
+                                    <div class="name">Bánh canh cá Vũ Tâm</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="#" class="item">
+                                    <div class="image">
+                                        <img src="/assets/images/garan.png" alt="">
+                                    </div>
+                                    <div class="name">Bánh canh cá Vũ Tâm</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="#" class="item">
+                                    <div class="image">
+                                        <img src="/assets/images/garan.png" alt="">
+                                    </div>
+                                    <div class="name">Bánh canh cá Vũ Tâm</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{> footer}}   

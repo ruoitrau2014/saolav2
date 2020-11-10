@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="1084514699838-a1a2831juv7l1fmm6pm6rdv8cg73ae6d.apps.googleusercontent.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hatinhcogi.com</title>
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/style.min.css">
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '364544441357190',
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v8.0'
+          });
+            
+          FB.AppEvents.logPageView();   
+          checkLoginState()  
+        };
+      
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script>
+        var googleUser = {}, auth2, signOutGG = function(){
+            auth2.signOut().then(function(){
+                $.ajax({
+                    url: '/auth/logout'
+                })
+                changeAfterLogoutGG()
+                attachSignin(document.getElementsByClassName('gg-button')[0]);
+            })
+        }
+        var startApp = function() {
+          gapi.load('auth2', function(){
+            // Retrieve the singleton for the GoogleAuth library and set up the client.
+            auth2 = gapi.auth2.init({
+              client_id: '1084514699838-a1a2831juv7l1fmm6pm6rdv8cg73ae6d.apps.googleusercontent.com',
+              cookiepolicy: 'single_host_origin',
+              // Request scopes in addition to 'profile' and 'email'
+              //scope: 'additional_scope'
+            })
+            auth2.then(function(){
+                if(auth2.isSignedIn.get()){                     
+                    changeAfterLoginGG()
+                }else{
+                    attachSignin(document.getElementsByClassName('gg-button')[0]);
+                }
+            })
+            
+            
+          });
+        };
+      
+        function attachSignin(element) {
+          
+          auth2.attachClickHandler(element, {},
+              function(googleUser) {
+                  
+                  var BasicProfile = googleUser.getBasicProfile()
+                  console.log(BasicProfile,BasicProfile.getGivenName(),BasicProfile.getFamilyName())
+                  
+                    var authResponse = googleUser.getAuthResponse(true)
+                  
+                  $.ajax({
+                        url: '/auth/google?access_token='+authResponse.access_token,
+                        type: 'POST',
+                        dataType: 'JSON',
+                        success: function(data){
+                            if(data.error){
+                                
+                            }
+                        },
+                        error:function(){
+                            
+                        }
+                  })
+                  localStorage.access_token = authResponse.access_token
+                  localStorage.id = BasicProfile.getId()
+                    localStorage.name = BasicProfile.getName()
+                    localStorage.email = BasicProfile.getEmail()
+                    localStorage.avatar = BasicProfile.getImageUrl()
+                    localStorage.type = 'gg'  
+                    changeAfterLoginGG()    
+                
+              }, function(error) {
+                alert(JSON.stringify(error, undefined, 2));
+              });
+        }
+        </script>
+    <style>
+        .hide{display: none!important;}
+        .show{display: block!important;}
+    </style>        
+</head>
+
+<body>
+    <div class="wrapper-bg">
+    </div>
+    <section class="menu-top d-none-mb">
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="#">Khám phá</a>
+                </li>
+                <li>
+                    <a href="#">Khám phá</a>
+                </li>
+                <li>
+                    <a href="#">Khám phá</a>
+                </li>
+                <li>
+                    <a href="#">Khám phá</a>
+                </li>
+                <li>
+                    <a href="#">Khám phá</a>
+                </li>
+                <li>
+                    <a href="#">Khám phá</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <header>
+        <div class="container">
+            <div class="main">
+                <div class="logo">
+                    <a href="/">
+                        <!-- <img src="/assets/images/logo.png" alt="Logo"> -->
+                        <img src="/assets/images/logo-ht.png" alt="">
+                    </a>
+                </div>
+                <div class="slide d-none-mb">                    
+                    <div class="swiper-container header-slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item" style="background-image: url(/assets/raw/banh_mYYt-1.png);">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item" style="background-image: url(/assets/raw/download.png);">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item"
+                                    style="background-image: url(/assets/raw/cach-lam-dui-ga-sot-chua-cay-cuc-ngon-1.png);">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item"
+                                    style="background-image: url(/assets/raw/foody-upload-api-foody-mobile-foody-bun-ca-ro-dong-190111165817.png);">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item" style="background-image: url(/assets/raw/chao-canh-vinh.png);">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item" style="background-image: url(/assets/raw/banh_mYYt-1.png);">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item" style="background-image: url(/assets/raw/banh_mYYt-1.png);">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item" style="background-image: url(/assets/raw/banh_mYYt-1.png);">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="action">
+                    <div class="navication d-none-mb">
+                        <div class="h-prev">
+                            <i class="fas fa-caret-left"></i>
+                        </div>
+                        <div class="h-next">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                    </div>
+                    <!-- <div class="notify">
+                        <img src="" alt="">
+                    </div> -->
+                    <div class="register-new d-none-mb">
+                        <label class="switch">
+                            <input type="checkbox" checked id="loginBtn">
+                            <div class="slider round">
+                                <span class="on">
+                                    <i class="fal fa-user"></i>Đăng nhập
+                                </span>
+                                <span class="off">
+                                    Dùng mã QR
+                                </span>                           
+                            </div>
+                        </label>
+                        <div class="blocks">
+                            <div class="swiper-container slide-method-login">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide swiper-no-swiping">
+                                        <div class="login-block">
+                                            <form action="#" id="normalLogin">
+                                                <div class="username">
+                                                    <input type="text"  placeholder="Tên đăng nhập/ số điện thoại">
+                                                </div>
+                                                <div class="password">
+                                                    <input type="password" placeholder="Mật khẩu" name="" id="">
+                                                </div>
+                                                
+                                                <button type="submit">Đăng nhập</button>
+                                            </form>
+                                            <div class="liner-other">
+                                                <span>
+                                                    Lựa chọn khác
+                                                </span>
+                                            </div>
+                                            <button class="fb-button" type="button" onclick="checkFacebookLogin()"><i class="fab fa-facebook-f"></i>Facebook</button>
+                                            <!--fb:login-button scope="public_profile,email" onlogin="checkLoginState();" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="true" data-width="222px"></fb:login-button-->
+
+                                            <button class="gg-button mt-2" type="button"><i class="fab fa-google"></i>Google</button>
+                                            <button class="mt-2 hide" type="button">Tài khoản</button>
+                                            <div class="register-link">
+                                                <a href="#">Đăng ký</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-no-swiping">
+                                        <div class="qr-block">
+                                            <div class="image">
+                                                <img src="/assets/images/testQr.png" alt="">
+                                            </div>   
+                                            <div class="text">
+                                                Quét mã QR Code trên ứng dung để đăng nhập tài khoản
+                                            </div> 
+                                            <div class="link">
+                                                <a href="#">
+                                                    Hướng dẫn đăng nhập bằng mã QR
+                                                </a>
+                                                <a href="#" class="text-root mt-3">
+                                                    Bạn chưa có tài khoản?
+                                                </a>
+                                                <a href="#" class="text-root">
+                                                    Bạn chưa cài app trên điện thoại?
+                                                </a>
+                                            </div>                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <a href="#" class="icon-user nd-none-mb">
+                        <i class="fal fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
